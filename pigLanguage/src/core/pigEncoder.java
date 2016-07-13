@@ -10,7 +10,7 @@ public class pigEncoder {
 	public String toBin(String s) {
 		String bin = new String();
 		for (int i = 0; i < s.length(); i++) {
-			bin += Integer.toBinaryString((int) s.toCharArray()[i]);
+			bin += String.format("%12s", Integer.toBinaryString((int) s.toCharArray()[i])).replace(" ", "0");
 		}
 		return bin;
 	}
