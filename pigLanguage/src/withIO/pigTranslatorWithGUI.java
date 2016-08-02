@@ -106,16 +106,14 @@ public class pigTranslatorWithGUI extends JFrame {
 
 	public static void translateToPig() {
 		String human = textField.getText();
-		pigEncoder p = new pigEncoder();
-		String pig = p.encode(human);
+		String pig = pigEncoder.encode(human);
 		textArea.setText(pig);
 		clipboard.setContents(new StringSelection(pig), null);
 	}
 
 	public static void translateToHuman() {
 		String pig = textField_1.getText();
-		pigDecoder p = new pigDecoder();
-		String human = p.decode(pig);
+		String human = pigDecoder.decode(pig);
 		textArea_1.setText(human);
 		clipboard.setContents(new StringSelection(human), null);
 	}
